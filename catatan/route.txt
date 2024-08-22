@@ -1,0 +1,5 @@
+untuk melihat daftar route:
+    php artisan route:list
+
+
+

@@ -1,0 +1,8 @@
+vendor berisi function2 buatan laravel, jika ingin mengedit:
+    > php artisan vendor:publish
+    Contoh ingin mengedit pagination, pilih 5 dan fileny akan berpindah ke view
+
+
+
+
+

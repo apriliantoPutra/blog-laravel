@@ -1,0 +1,6 @@
+> composer dumpautoload
+> php artisan optimize:clear
+
+
+
+

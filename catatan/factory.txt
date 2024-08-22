@@ -1,0 +1,36 @@
+factory adalah perintah untuk mengisi data database secara random otomatis
+
+link: https://fakerphp.org/
+
+1. membuat factory:
+    php artisan make:factory (format nama: NamaFactory, contoh:BlogFactory)
+2. membuat data random user:
+    > php artisan tinker
+    > App\Models\User::factory()->create(); // membuat 1 data
+    > App\Models\User::factory(10)->unverified()->create(); // membuat 10 data dari function unverified()
+3. mengubah local (data bahasa) di file .env
+    APP_FAKER_LOCALE=id_ID
+    APP_FAKER_LOCALE=en_US
+4. membuat factory dua tabel yang sudah terhubung: (tabel users(id) dan tabel blogs(user_id)):
+    > migration blogs:
+        $table->foreignId('user_id')->constrained(
+                table: 'users',
+                indexName: 'blogs_user_id'
+            );
+    > lakukan fresh migration:
+        php artisan migrate:fresh
+    > buka tinker:
+        php artisan tinker
+    > buat kedua data jumlah sama2 10:
+        App\Models\Blog::factory(10)->create();
+    > buat data User 5 dan data Blog 100 (kedua id terhubung acak):
+        App\Models\Blog::factory(100)->recycle(User::factory(5)->create())->create();
+    > buat data User 5, Category 5 dan data Blog 100 (kedua id terhubung acak) menggunakan array:
+        App\Models\Blog::factory(100)->recycle([User::factory(5)->create(), Category::factory(3)->create()])->create();
+
+
+
+
+
+
+

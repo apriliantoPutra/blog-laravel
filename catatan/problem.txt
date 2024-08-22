@@ -1,0 +1,16 @@
+1. Problem N +1(mengatasi query yg digunakan terlalu banyak, jika pada view melakukan looping)
+    link: https://github.com/barryvdh/laravel-debugbar
+    > menginstall laravel debugbar:
+        composer require barryvdh/laravel-debugbar --dev
+
+
+
+
+
+
+
+
+
+
+
+

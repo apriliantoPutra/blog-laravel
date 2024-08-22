@@ -1,0 +1,7 @@
+1. menjalankan seeder:
+    php artisan db:seed
+2. menjalankan migrate fresh & seeder:
+    php artisan migrate:fresh --seed
+
+
+

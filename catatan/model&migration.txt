@@ -1,0 +1,22 @@
+A. Models:
+    1. Membuat models:
+        php artisan make:model
+    2. Membuat models dengan migration (dengan nama Blog)
+        php artisan make:model Blog -m
+    2. Membuat models dengan migration dan factory (dengan nama Category)
+        php artisan make:model Category -mf
+
+B. Migration:
+    1. Membuat migration (nama default: create_blogs_table):
+        php artisan make:migration create_blogs_table
+    2. Melakukan migrate:
+        php artisan migrate
+    3. Menghapus semua data database dan migrate ulang:
+        php artisan migrate:fresh
+
+
+
+
+
+
+

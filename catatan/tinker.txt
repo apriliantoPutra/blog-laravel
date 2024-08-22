@@ -1,0 +1,63 @@
+1. Buka Laravel Tinker dengan perintah:
+    php artisan tinker
+2. menambahkan data ke model Blog
+    App\Models\Blog::create([
+        'judul-blog' => 'Judul Artikel 1',
+        'penulis-blog' => 'Boy Wiliam',
+        'isi-blog' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea provident, nobis consequuntur quasi eligendi quisquam placeat voluptate? Temporibus unde asperiores ducimus maxime ipsa amet optio, ex, veniam consequatur molestias vero.'
+    ]);
+
+3. menampilkan semua data di model Blog
+    App\Models\Blog::all()
+
+4. menampung ke variabel:
+    $blogs= App\Models\Blog::all()
+
+5. manampilkan data pertama:
+    $blogs->first()
+
+6. mencari data dgn id 4
+    $blogs->find(4)
+
+7. menghapus semua data
+    $blogs->delete()
+
+
+isian blog:
+App\Models\Blog::create([
+    'judul-blog' => 'Teknologi AI Terbaru di Tahun 2024',
+    'penulis-blog' => 'Muhammad Aprilianto Putra',
+    'isi-blog' => 'Pada tahun 2024, teknologi AI mengalami perkembangan pesat. Dari mobil otonom hingga asisten virtual yang lebih canggih, AI semakin meresap dalam kehidupan sehari-hari. Salah satu inovasi terbaru adalah penggunaan AI dalam bidang kesehatan, di mana algoritma machine learning digunakan untuk mendeteksi penyakit lebih awal dengan akurasi yang tinggi. Selain itu, AI juga mulai digunakan untuk meningkatkan efisiensi di sektor pertanian, membantu petani mengoptimalkan hasil panen dan mengurangi penggunaan pestisida. Meski banyak manfaat yang ditawarkan, penggunaan AI juga menimbulkan berbagai tantangan, terutama terkait privasi dan etika. Oleh karena itu, penting bagi kita untuk terus memantau perkembangan teknologi ini dan memastikan bahwa penerapannya tetap dalam batas yang aman dan bermanfaat bagi masyarakat.'
+]);
+
+App\Models\Blog::create([
+    'judul-blog' => 'Tips Meningkatkan Produktivitas Kerja di Era Digital',
+    'penulis-blog' => 'Boy Wiliam',
+    'isi-blog' => 'Era digital membawa banyak kemudahan, namun juga bisa menjadi sumber distraksi. Untuk meningkatkan produktivitas kerja, penting untuk menerapkan beberapa strategi efektif. Pertama, buatlah jadwal harian yang teratur dan prioritaskan tugas-tugas yang paling penting. Kedua, gunakan alat bantu seperti aplikasi manajemen tugas untuk melacak progres dan tenggat waktu. Ketiga, luangkan waktu untuk beristirahat sejenak dan menjauh dari layar, guna mengurangi kelelahan mata dan stres. Keempat, ciptakan lingkungan kerja yang kondusif, bebas dari gangguan, dan nyaman. Terakhir, selalu evaluasi dan sesuaikan metode kerja Anda untuk menemukan pendekatan yang paling sesuai dengan kebutuhan dan gaya kerja pribadi. Dengan disiplin dan perencanaan yang baik, produktivitas kerja dapat ditingkatkan secara signifikan.'
+]);
+
+App\Models\Blog::create([
+    'judul-blog' => 'Panduan Lengkap Memulai Bisnis Online',
+    'penulis-blog' => 'Sonny Picture',
+    'isi-blog' => 'Memulai bisnis online dapat menjadi langkah yang menantang namun menguntungkan. Pertama, tentukan niche atau pasar yang ingin Anda targetkan. Lakukan riset pasar untuk memahami kebutuhan dan preferensi konsumen. Kedua, buatlah rencana bisnis yang mencakup strategi pemasaran, analisis kompetitor, dan proyeksi keuangan. Ketiga, bangun website profesional yang mudah diakses dan user-friendly. Gunakan platform e-commerce yang sesuai untuk mengelola produk dan transaksi. Keempat, manfaatkan media sosial dan SEO untuk meningkatkan visibilitas online dan menjangkau lebih banyak pelanggan. Terakhir, tetap fleksibel dan terus evaluasi kinerja bisnis Anda untuk melakukan penyesuaian yang diperlukan. Dengan langkah-langkah ini, Anda dapat membangun bisnis online yang sukses dan berkelanjutan.'
+]);
+
+App\Models\Blog::create([
+    'judul-blog' => 'Manfaat Meditasi untuk Kesehatan Mental',
+    'penulis-blog' => 'Amanda Smith',
+    'isi-blog' => 'Meditasi telah lama dikenal sebagai praktik yang bermanfaat bagi kesehatan mental. Dengan melakukan meditasi secara rutin, Anda dapat mengurangi stres, kecemasan, dan meningkatkan kesejahteraan emosional. Meditasi membantu menenangkan pikiran dan meningkatkan fokus, sehingga Anda dapat menghadapi tantangan sehari-hari dengan lebih tenang dan terkendali. Selain itu, meditasi juga dapat membantu meningkatkan kualitas tidur dan mengurangi gejala depresi. Berbagai teknik meditasi, seperti mindfulness dan pernapasan dalam, dapat dipraktikkan oleh siapa saja, kapan saja. Hanya dengan meluangkan waktu beberapa menit setiap hari untuk bermeditasi, Anda bisa merasakan perubahan positif dalam kesejahteraan mental dan fisik Anda. Jadi, mulailah praktik meditasi hari ini dan rasakan manfaatnya bagi hidup Anda.'
+]);
+
+App\Models\Blog::create([
+    'judul-blog' => 'Resep Masakan Sehat untuk Diet Seimbang',
+    'penulis-blog' => 'Daniel Tan',
+    'isi-blog' => 'Menjaga pola makan seimbang sangat penting untuk kesehatan tubuh. Berikut adalah resep masakan sehat yang mudah dan lezat untuk diet seimbang. Bahan-bahannya meliputi: 200 gram dada ayam tanpa kulit, 1 cangkir brokoli, 1 wortel, 1 paprika merah, 2 siung bawang putih, dan 1 sendok makan minyak zaitun. Potong dadu ayam dan sayuran. Panaskan minyak zaitun di wajan, tumis bawang putih hingga harum, lalu masukkan ayam. Masak hingga ayam berubah warna, tambahkan sayuran, dan tumis hingga matang. Tambahkan sedikit garam dan lada untuk rasa. Sajikan dengan nasi merah atau quinoa. Resep ini kaya akan protein dan serat, serta rendah lemak. Dengan mengonsumsi makanan sehat seperti ini, Anda dapat menjaga kesehatan tubuh dan tetap bugar.'
+]);
+
+
+
+
+
+
+
+

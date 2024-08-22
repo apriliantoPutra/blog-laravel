@@ -1,0 +1,9 @@
+membuat controller basic:
+    php artisan make:controller BlogController
+
+membuat controller resource (terdapat crud dan bisa menyambung model):
+    php artisan make:controller AdminCategoryController --resource 
+    php artisan make:controller AdminCategoryController --resource --model=Category
+
+
+

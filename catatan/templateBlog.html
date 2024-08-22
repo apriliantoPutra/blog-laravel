@@ -1,0 +1,31 @@
+<article class="py-8 max-w-screen-md border-b border-gray-300">
+    <h2 class="mb-1 text-3xl tracking-light font-bold text-gray-900">
+        {{ $blog['judul_blog'] }}
+    </h2>
+    <div>
+        Oleh
+        <!-- menampilkan berdasarkan username, bukan id  -->
+        <a
+            href="/users/{{ $blog->user->username }}"
+            class="text-base text-gray-500 hover:underline"
+            >{{ $blog->user->name }}</a
+        >
+        <!-- Category di ambil dari function Category di Model Blog($blog) dan name(tabel name categories) -->
+        <a
+            href="/categories/{{ $blog->category->slug }}"
+            class="text-base text-gray-600 hover:underline"
+            >{{ $blog->category->name }}</a
+        >
+        | {{ $blog->created_at->diffForHumans() }}
+    </div>
+
+    <!-- format('j F Y')  untuk format tanggal -->
+    <!-- diffForHumans() untuk format berapa menit/jam/ hari yg lalu -->
+
+    <p class="my-4 font-light">{{ Str::limit($blog['isi_blog'], 150) }}</p>
+    <a
+        href="/blog/{{ $blog['id'] }}"
+        class="font-medium text-blue-500 hover:underline"
+        >Read More &raquo;</a
+    >
+</article>
