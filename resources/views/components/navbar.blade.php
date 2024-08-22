@@ -52,8 +52,7 @@
                             tabindex="-1">
                             <!-- Active: "bg-gray-100", Not Active: "" -->
                             @auth
-                                <a href="/dashboard" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                    tabindex="-1" id="user-menu-item-0">Dashboard</a>
+
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                     tabindex="-1" id="user-menu-item-1">Settings</a>
                                 <form action="/logout" method="post">
@@ -140,8 +139,7 @@
             </div>
             <div class="mt-3 space-y-1 px-2">
                 @auth
-                    <a href="/dashboard"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Dashboard</a>
+                    
                     <a href="#"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Settings</a>
                     <form action="/logout" method="post">

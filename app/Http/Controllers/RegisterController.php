@@ -16,6 +16,7 @@ class RegisterController extends Controller
             'name'=> 'required|min:5|max:255',
             'username'=> ['required', 'min:5', 'max:255', 'unique:users'], // unique ditabel users
             'email'=> ['required', 'email:dns', 'unique:users'],
+            'role' => 'required|in:user,author', // restrict role to 'user' or 'author'
             'password'=> ['required', 'min:5', 'max:255'],
 
         ]);

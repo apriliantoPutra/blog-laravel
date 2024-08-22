@@ -23,6 +23,21 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
+    public function isAuthor()
+    {
+        return $this->role === 'author';
+    }
+
+    public function isUser()
+    {
+        return $this->role === 'user';
+    }
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -49,7 +64,8 @@ class User extends Authenticatable
 
     // membuat relation dgn model Blog (1 User bisa punya banyak Blog)
 
-    public function blogs(): HasMany{
+    public function blogs(): HasMany
+    {
         return $this->hasMany(Blog::class, 'user_id'); // secara default kedua relation harus sama(id != user_id), jd definisikan nama relationnya yaitu user_id
     }
 }

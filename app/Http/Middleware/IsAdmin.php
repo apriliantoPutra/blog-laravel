@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
 class IsAdmin
@@ -16,7 +17,7 @@ class IsAdmin
     public function handle(Request $request, Closure $next): Response
     {
         // jika blm login maka error 403
-        if(auth()->guest()){
+        if(Auth::guest()){
             abort(403);
         }
         // jika username yg login bukan Putra maka error 403
@@ -25,7 +26,7 @@ class IsAdmin
         // }
 
         // jika bukan is_admin==1, error 403
-        if(!auth()->user()->is_admin){
+        if(!Auth::user()->is_admin){
             abort(403);
         }
         return $next($request);
