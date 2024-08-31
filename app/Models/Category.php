@@ -19,7 +19,8 @@ class Category extends Model
             ]
         ];
     }
+
     public function blogs(): HasMany{
-        return $this->hasMany(Blog::class, 'category_id'); // secara default kedua relation harus sama(id != user_id), jd definisikan nama relationnya yaitu user_id
+        return $this->hasMany(Blog::class, 'category_id', 'id'); // secara default kedua relation harus sama(id != user_id), jd definisikan nama relationnya yaitu user_id
     }
 }

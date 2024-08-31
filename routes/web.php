@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AdminAuthorController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\AdminReadingController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\DashboardBlogController;
 use App\Http\Controllers\LoginController;
@@ -113,8 +115,8 @@ Route::resource('/dashboard/categories', AdminCategoryController::class)->middle
 // admin
 Route::middleware(['auth', 'role:admin'])->group(function() {
     Route::get('admin/dashboard', [AdminDashboardController::class, 'index']);
-    Route::get('admin/user-reading', [AdminUserController::class, 'user']);
-    Route::get('admin/user-author', [AdminUserController::class, 'author']);
+    Route::resource('admin/user-reading', AdminReadingController::class);
+    Route::resource('admin/user-author', AdminAuthorController::class);
 });
 
 

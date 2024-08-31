@@ -22,6 +22,7 @@ class User extends Authenticatable
         'username',
         'email',
         'password',
+        'role' // jika terdapat input hidden
     ];
     public function isAdmin()
     {
@@ -66,6 +67,6 @@ class User extends Authenticatable
 
     public function blogs(): HasMany
     {
-        return $this->hasMany(Blog::class, 'user_id'); // secara default kedua relation harus sama(id != user_id), jd definisikan nama relationnya yaitu user_id
+        return $this->hasMany(Blog::class, 'user_id', 'id'); // secara default kedua relation harus sama(id != user_id), jd definisikan nama relationnya yaitu user_id
     }
 }
